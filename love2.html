@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love bb</title>
+    <link rel="stylesheet" href="./love2.css">
+</head>
+<body>
+
+    <div class="conatianr">
+        <div class="envelope-wrappe">
+            <div class="envlop">
+
+                <div class="letter">
+                    <div class="text">
+                        <strong > رسالة لحبيبتي </strong>
+                        <p>
+                            حبيبتي وصال، نجمة السما الزاهية،
+                            فعيونها كتلألأ القمر في ليل الهوى.
+                            عام وتسعة أشهر مضو كالأماني الجميلة،
+                            في حبها، أنا البحار المتلاطمة والسفينة الهائمة.
+                            
+                            صال، اسم يرنو للأمل والسعادة،
+                            كأنها زهرة فاتحة في قلبي وأشرقت.
+                            عيناها تحمل أسرار الكون والأماني،
+                            وشفتاها تلوح بالقبلات الحلوة والأمل.
+                            
+                            في لحظاتنا العابرة، نمشي بخطوات خفيفة،
+                            نحتسي من كأس الحب والحنان.
+                            وصال، هي الأمل والشوق والأغنية،
+                            تملأ قلبي بالحياة والألوان.
+                            
+                            فلنحتفل باللحظات الجميلة،
+                            بالأماني لي كنتي ترسمها أيدينا المتشابكة.
+                            حبيبتي وصال، أنتي القصيدة الرومانسية،
+                            وأنا الشاعر لي كيكتب عليك بكل حب وشوق.
+                             
+                        </p>
+
+                    
+                    </div>
+                </div>
+        </div>
+        <div class="heartmi"></div>
+
+
+        </div>
+        <div class="letter2">
+            <div class="text2">
+                <strong>رسالة لحبيبتي</strong>
+                <p>
+                    حبيبتي وصال، نجمة السما الزاهية،
+                    فعيونها كتلألأ القمر في ليل الهوى.
+                    عام وتسعة أشهر مضو كالأماني الجميلة،
+                    في حبها، أنا البحار المتلاطمة والسفينة الهائمة.
+                    <br>
+                    <br>
+                    صال، اسم يرنو للأمل والسعادة،
+                    كأنها زهرة فاتحة في قلبي وأشرقت.
+                    عيناها تحمل أسرار الكون والأماني،
+                    وشفتاها تلوح بالقبلات الحلوة والأمل.
+                    <br>
+                    <br>
+                
+                    في لحظاتنا العابرة، نمشي بخطوات خفيفة،
+                    نحتسي من كأس الحب والحنان.
+                    وصال، هي الأمل والشوق والأغنية،
+                    تملأ قلبي بالحياة والألوان.
+                    <br>
+                    <br>
+                
+                    فلنحتفل باللحظات الجميلة،
+                    بالأماني لي كنتي ترسمها أيدينا المتشابكة.
+                    حبيبتي وصال، أنتي القصيدة الرومانسية،
+                    وأنا الشاعر لي كيكتب عليك بكل حب وشوق.
+                </p>
+                
+                <h2>
+                  <em>&#128151</em>   عمر حجوب 
+                
+                  <img src="./1f339.png" alt="" width="45px"; height="45px";>
+                </h2>
+            </div>
+        </div>
+
+        
+    </div>
+    
+       
+
+    <script>
+
+
+
+
+//-------------------------------------------------
+const letter2 =document.querySelector('.letter2')
+const envel=document.querySelector('.envelope-wrappe')
+//-----------------------------------
+        envel.addEventListener('click', (e) =>{
+            if(e.target.classList.toggle('.envelope-wrappe') && !e.target.classList.contains('flap')){
+                envel.classList.toggle('flap')
+
+                letter2.style.top='15px';
+                document.querySelector('.envlop').style.left='-100px';
+                document.querySelector('.letter').style.zIndex ='2'; 
+                document.querySelector('body').style.background='url(./2.jpg)' 
+
+
+
+                var characters = textToWrite.split('');
+                var delay = 100; // بالمللي ثانية
+              
+            }else{   
+        envel.classList.remove('flap')
+        letter2.style.top='-100%';
+        document.querySelector('.envlop').style.left='0';
+        document.querySelector('.letter').style.zIndex ='-1';
+        document.querySelector('body').style.background='black' 
+
+
+
+            }
+           
+
+
+
+        })
+//-----------------------------------------------------------------------------
+        document.addEventListener('mousemove', function(e){
+            let body =document.querySelector('body')
+            let heart = document.createElement('span')
+            let x = e.offsetX
+            let y = e.offsetY
+            heart.style.left=x+'px'
+            heart.style.top=y+'px'
+
+            let size =Math.random()*80;
+            heart.style.width=20+size+"px"
+            heart.style.height=20+size+"px"
+
+            let transvalue=Math.random()*360;
+            heart.style.transform=`rotate(${transvalue}deg) `
+
+
+            body.appendChild(heart)
+
+            setTimeout(function(){
+                heart.remove();
+            },1000)
+
+
+        })
+    </script>
+</body>
+</html>
